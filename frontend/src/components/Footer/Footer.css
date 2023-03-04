@@ -1,0 +1,20 @@
+.Footer_Main_Div{
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    background: #424855;
+    color: #f5f5f5;
+    padding: 0.2em;
+    
+}
+
+.Heart_Icon_Footer{
+    color: red;
+}
+
+.Footer_Team_Name{
+    color: #61dafb;
+}
