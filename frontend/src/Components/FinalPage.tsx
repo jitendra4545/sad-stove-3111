@@ -1,6 +1,6 @@
 import { Text, Image, Button, Flex, Box } from "@chakra-ui/react";
 import { useState } from "react";
-import { RepeatIcon } from "@chakra-ui/icons";
+import {BsArrowRepeat} from 'react-icons/bs'
 const FinalPage = () => {
   const [count, setCount] = useState(0);
   return (
@@ -37,7 +37,7 @@ const FinalPage = () => {
           color: "black"
         }}
         color="white"
-        rightIcon={<RepeatIcon />}
+        rightIcon={<BsArrowRepeat />}
         bg="teal.300"
       >
         Play Again
