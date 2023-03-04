@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState ,useEffect} from 'react';
 import {Box,Input,Button} from '@chakra-ui/react'
 interface MathGameProps {
   total: number;
@@ -15,21 +15,21 @@ const MathGame: React.FC<MathGameProps> = ({ total, seti, setplayeroneRight, set
   const [task,setTask]=useState<boolean>(false)
   const handleComp = () => {
     if (total === Number(player2) && total === Number(player1)) {
-      alert(' 2 player  success');
+      alert(' Both  player answer correct ');
       seti((prev) => prev + 1);
       setplayer2("");
       setplayer1("");
       setplayeroneRight((prev) => prev + 1);
       setplayertwoRight((prev) => prev + 1);
     } else if (total !== Number(player2) && total === Number(player1)) {
-      alert('player one success');
+      alert('player 1 correct');
       seti((prev) => prev + 1);
       setplayer2("");
       setplayer1("");
       setplayeroneRight((prev) => prev + 1);
       setplayertwoWrong((prev) => prev - 1);
     } else if (total === Number(player2) && total !== Number(player1)) {
-      alert('player two success');
+      alert('player 2 correct');
       seti((prev) => prev + 1);
       setplayer2("");
       setplayer1("");
@@ -41,16 +41,22 @@ const MathGame: React.FC<MathGameProps> = ({ total, seti, setplayeroneRight, set
       setplayer1("");
       setplayeroneWrong((prev) => prev - 1);
       setplayertwoWrong((prev) => prev - 1);
-      alert('failed')
+      alert('wrong answer')
     }
   }
+
+  // useEffect(() => {
+  
+  // }, [])
 
   return (
     <Box display={{base:'grid',lg:'flex'}} gap='4' w={{base:'80%',lg:'60%'}} m='auto' >
       
       <Input bg='white' value={player1} onChange={(e) => setplayer1(e.target.value)} type="text" placeholder='player one' />
-      <Button bg='gold'   padding={'10px 30px'} onClick={handleComp}>Submit</Button>
+      
       <Input bg='white' value={player2} onChange={(e) => setplayer2(e.target.value)} type="text" placeholder='player two' />
+     
+      <Button bg='gold'   padding={'10px 30px'} onClick={handleComp}>Submit</Button>
     </Box>
   );
 }

@@ -2,14 +2,12 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css'
-import GameStart from './pages/Gamestart';
-import { Dashboard } from "./pages/Dashboard";
+import { AllRoutes } from './components/AllRoutes';
 
 function App() {
   return (
     <div className="App">
-      {/* <GameStart /> */}
-      <Dashboard/>
+     <AllRoutes/>
     </div>
   );
 }
