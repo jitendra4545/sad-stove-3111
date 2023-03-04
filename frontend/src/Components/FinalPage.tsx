@@ -1,7 +1,7 @@
 import { Text, Image, Button, Flex, Box } from "@chakra-ui/react";
 import { useState } from "react";
 import { RepeatIcon } from "@chakra-ui/icons";
-const EndGame = () => {
+const FinalPage = () => {
   const [count, setCount] = useState(0);
   return (
     <Box h="100vh" bg="#282C34" border={"2px solid orange"}>
@@ -55,4 +55,4 @@ const EndGame = () => {
   );
 };
 
-export default EndGame;
+export default FinalPage;

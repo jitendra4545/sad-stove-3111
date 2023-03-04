@@ -1,5 +1,5 @@
 import React from 'react'
-import Footer from '../components/Footer/Footer'
+// import Footer from '../components/Footer/Footer'
 import "./Gamestart.css"
 import { FaUserGraduate } from "react-icons/fa";
 import { Input, Stack } from '@chakra-ui/react'
@@ -56,7 +56,7 @@ const GameStart = () => {
 
             </div>
 
-            <Footer />
+            {/* <Footer /> */}
 
         </>
     )

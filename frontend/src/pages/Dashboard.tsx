@@ -1,6 +1,8 @@
+
 import React, { useState ,useEffect} from 'react';
-import  MathGame  from '../components/MathGame';
 import { Box,Heading,Text } from '@chakra-ui/react';
+import Navbar from '../Components/Navbar';
+import MathGame from '../Components/MathGame';
 export const Dashboard = () => {
   const [playeroneRight, setplayeroneRight] = useState<number>(0);
   const [playertwoRight, setplayertwoRight] = useState<number>(0);
@@ -42,6 +44,8 @@ export const Dashboard = () => {
   return (
     <Box bg='#282c34' h={'100vh'}>
    
+      <Navbar playeroneRight={playeroneRight} playertwoRight={playertwoRight} playeroneWrong={playeroneWrong} playertwoWrong={playertwoWrong} />
+
       <Heading padding={'80px'} color='white'>
         {x}
         {operator[i]}
